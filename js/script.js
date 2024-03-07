@@ -39,8 +39,8 @@ const discountJr = 20 / 100;
 const discountSr = 40 / 100;
 
 // message
-let ticketEl1 = document.getElementById('ticket');
-console.log(ticketEl1);
+/* let ticketEl1 = (document.getElementById('ticket').value);
+console.log(ticketEl1); */
 
 let elUserKm = (document.getElementById('Km').value);
 console.log(elUserKm);
@@ -61,8 +61,6 @@ elButton.addEventListener('click', function(){
     const userLastName = elLastName.value;
     const age = elAge.value;
     elBox.innerHTML = userName;
-    elBox.className = 'box '+ colore +' ';
-
 })
 
 let price = priceKm * Km;
@@ -73,7 +71,6 @@ if (age < 18) {
 }else if (age >= 65) {
     price -= price * discountSr;
 }
-console.log(userKm);
 
 console.log(age);
 
