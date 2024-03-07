@@ -1,4 +1,12 @@
 /* my utilities */
 .jw-debug{
-    border: 1px solid black;
+    border: 2px solid black;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+.wrapper{
+    height: 100vh;
+    background-color: cadetblue;
+    overflow: hidden;
 }
