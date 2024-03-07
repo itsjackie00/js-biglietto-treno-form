@@ -27,7 +27,7 @@
                 <div class="col-3 ">
                     <div class="m-2">
                         <label for="name" class="py-3">Nome</label>
-                        <input type="text"  class="form-control my-1 " placeholder="Inserisci il tuo nome" id="userName" value="">
+                        <input type="text"  class="form-control my-1 " placeholder="Inserisci il tuo nome" id="userName">
                     </div>
                 </div>
                 <div class="col-3">
@@ -50,9 +50,9 @@
                     </label>
                     <select class="form-select form-select-sm" id="age">
                         <option selected value="">Seleziona</option>
-                        <option value="minor" >Minorenne</option>
-                        <option value="major">Maggiorenne</option>
-                        <option value="over65">Over 65</option>
+                        <option value="17" >Minorenne</option>
+                        <option value="18">Maggiorenne</option>
+                        <option value="65">Over 65</option>
                     </select>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-center my-5 py-2 ">
@@ -78,10 +78,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                    <th class="bg-secondary">1</th>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
+                    <th class="bg-secondary" id="user">1</th>
+                    <td id="discount">2</td>
+                    <td id="random">3</td>
+                    <td id="price">4</td>
                   </tr>
                 </tbody>
               </table>
@@ -91,8 +91,8 @@
     </div>
 
 <!-- js src -->
-    <script src="js/utility.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/utility.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
 
 </html>
