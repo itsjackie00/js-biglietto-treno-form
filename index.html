@@ -17,7 +17,54 @@
 </head>
 
 <body>
-    <div id="ticket"></div>
+    <div class="wrapper">
+        <h1 class="text-center text-uppercase text-white py-3">
+            Calcola il prezzo del tuo biglietto
+        </h1>
+        <section class="container-sm bg-light my-5">
+            <div class="row">
+                <div class="col-3 ">
+                    <div class="m-2 name">
+                        <label for="name" class="py-3">Nome</label>
+                        <input type="text" class="form-control my-1 " placeholder="Inserisci il tuo nome"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="m-2 lastname">
+                        <label for="name" class="py-3 ">Cognome</label>
+                        <input type="text" class="form-control my-1 " placeholder="Inserisci il tuo cognome"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="m-2 chilometri">
+                        <label for="name" class="py-3 ">Km da percorre</label>
+                        <input type="text" class="form-control my-1 " placeholder="Inserisci km da percorre"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <label for="select-age" class="m-4">
+                        Seleziona età
+                    </label>
+                    <select class="form-select form-select-sm">
+                        <option selected>Seleziona</option>
+                        <option value="1">Minorenne</option>
+                        <option value="2">Maggiorenne</option>
+                        <option value="3">Over 65</option>
+                      </select>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="d-flex justify-content-evenly ">
+            
+            
+            
+        </div> -->
+        <div id="ticket"></div>
+
+    </div>
 
     <script src="js/utility.js"></script>
     <script src="js/script.js"></script>
