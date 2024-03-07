@@ -42,45 +42,38 @@ const discountSr = 40 / 100;
 /* let ticketEl1 = (document.getElementById('ticket').value);
 console.log(ticketEl1); */
 
-let elUserKm = (document.getElementById('Km').value);
-console.log(elUserKm);
-let elName = (document.getElementById('userName').value);
-let elLastName = (document.getElementById('userLastName').value);
+let elUserKm = (document.getElementById('Km'));
+console.log(elUserKm.value);
+let elName = (document.getElementById('userName'));
+let elLastName = (document.getElementById('userLastName'));
 let elAge = (document.getElementById('age'));
 let elButton = document.querySelector('.btn.btn-success');
 
 // console.log(elName, elLastName, elAge, elButton);
 
-let elBox = document.querySelector('.box');
-//console.log(elBox);
+elButton.addEventListener('click', function () {
+    let price = priceKm * elUserKm.value;
 
-elButton.addEventListener('click', function(){
+    if (elAge.value < 18) {
+        price -= price * discountJr;
+        document.getElementById('discount').innerHTML =
+        `${discountJr * 100}%`;
+
+    } else if (elAge.value >= 65) {
+        price -= price * discountSr;
+        document.getElementById('discount').innerHTML =
+        `${discountSr * 100}%`;
+
+    } else {
+        document.getElementById('discount').innerHTML =
+        `0%`;
+    }
+
     // console.log('hai cliccato il bottone');
-    const km = elUserKm.value;   
-    const userName = elName.value;
-    const userLastName = elLastName.value;
-    const age = elAge.value;
-    elBox.innerHTML = userName;
-})
-
-let price = priceKm * Km;
-
-if (age < 18) {
-    price -= price * discountJr;
-    console.log(price)
-}else if (age >= 65) {
-    price -= price * discountSr;
+    const km = elUserKm.value;
+    document.getElementById('price').innerHTML =
+        `€ ${price.toFixed(2)}`;
+    document.getElementById('user').innerHTML =
+        `${elName.value} ${elLastName.value}`;
 }
-
-console.log(age);
-
-
-/*
-console.log(price);
-
-document.getElementById('ticket').innerHTML = nameValue;
-/*let message = `Il costo del biglietto è: ${price}`;
-console.log(message);
-
-ticketEl1.innerHTML = message;
-*/
+)
