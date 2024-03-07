@@ -44,11 +44,26 @@ const priceKm = 0.21;
 const discountJr = 20 / 100;
 const discountSr = 40 / 100;
 
-let userKm = parseint('Quanti chilometri vuoi percorre ?');
-let age = parseInt("Inserisci l'età.. ");
+let userKm = parseFloat(document.getElementById('userKm').value);
+let age = ("Inserisci l'età.. ");
+let userName = (document.getElementById('userName').value);
+let userLastName = (document.getElementById('userLastName').value);
 
 console.log(userKm);
 
 console.log(age);
 
+let price = priceKm * userKm;
 
+if (age < 18) {
+    price -= price * discountJr
+}else if (age >= 65) {
+    price -= price * discountSr
+}
+
+console.log(price);
+/*let message = `Il costo del biglietto è: ${price}`;
+console.log(message);
+
+ticketEl1.innerHTML = message;
+*/
