@@ -48,7 +48,7 @@ let elName = (document.getElementById('userName'));
 let elLastName = (document.getElementById('userLastName'));
 let elAge = (document.getElementById('age'));
 let elButton = document.querySelector('.btn.btn-success');
-
+let elTicket = (document.getElementById('ticket'))
 // console.log(elName, elLastName, elAge, elButton);
 
 elButton.addEventListener('click', function () {
@@ -57,16 +57,16 @@ elButton.addEventListener('click', function () {
     if (elAge.value < 18) {
         price -= price * discountJr;
         document.getElementById('discount').innerHTML =
-        `${discountJr * 100}%`;
+            `${discountJr * 100}%`;
 
     } else if (elAge.value >= 65) {
         price -= price * discountSr;
         document.getElementById('discount').innerHTML =
-        `${discountSr * 100}%`;
+            `${discountSr * 100}%`;
 
     } else {
         document.getElementById('discount').innerHTML =
-        `0%`;
+            `0%`;
     }
 
     // console.log('hai cliccato il bottone');
@@ -75,5 +75,12 @@ elButton.addEventListener('click', function () {
         `€ ${price.toFixed(2)}`;
     document.getElementById('user').innerHTML =
         `${elName.value} ${elLastName.value}`;
+
+    document.getElementById('random').innerHTML =
+        `${getRndInteger(1725283, 195698987)}`;
+
+    elTicket.classList.remove('d-none');
 }
 )
+
+

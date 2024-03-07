@@ -10,3 +10,6 @@ body{
     background-color: cadetblue;
     overflow: hidden;
 }
+div{
+    transition: 2s;
+}
