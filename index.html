@@ -25,23 +25,22 @@
         <section class="container-sm bg-light my-5 rounded-4">
             <div class="row">
                 <div class="col-3 ">
-                    <div class="m-2 name">
+                    <div class="m-2">
                         <label for="name" class="py-3">Nome</label>
-                        <input type="text" class="form-control my-1 " placeholder="Inserisci il tuo nome"
-                            aria-describedby="basic-addon1">
+                        <input type="text"  class="form-control my-1 " placeholder="Inserisci il tuo nome" id="userName" value="">
                     </div>
                 </div>
                 <div class="col-3">
-                    <div class="m-2 lastname">
+                    <div class="m-2">
                         <label for="name" class="py-3 ">Cognome</label>
-                        <input type="text" class="form-control my-1 " placeholder="Inserisci il tuo cognome"
-                            aria-describedby="basic-addon1">
+                        <input type="text" id="userLastName" class="form-control my-1 " placeholder="Inserisci il tuo cognome"
+                            value="">
                     </div>
                 </div>
                 <div class="col-3">
-                    <div class="m-2 chilometri">
+                    <div class="m-2">
                         <label for="name" class="py-3 ">Km da percorre</label>
-                        <input type="text" class="form-control my-1 " placeholder="Inserisci km da percorre"
+                        <input type="text" id="Km" class="form-control my-1 " placeholder="Inserisci km da percorre"
                             aria-describedby="basic-addon1">
                     </div>
                 </div>
@@ -49,11 +48,11 @@
                     <label for="select-age" class="m-4">
                         Seleziona età
                     </label>
-                    <select class="form-select form-select-sm">
+                    <select class="form-select form-select-sm" id="age">
                         <option selected value="">Seleziona</option>
-                        <option value="">Minorenne</option>
-                        <option value="2">Maggiorenne</option>
-                        <option value="3">Over 65</option>
+                        <option value="minor" >Minorenne</option>
+                        <option value="major">Maggiorenne</option>
+                        <option value="over65">Over 65</option>
                     </select>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-center my-5 py-2 ">
@@ -72,24 +71,27 @@
             <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col" class="text-uppercase ">Nome passeggero</th>
+                    <th scope="col" class="text-uppercase">Nome passeggero</th>
                     <th scope="col" class="text-uppercase ">Discount</th>
                     <th scope="col" class="text-uppercase ">codice cp</th>
                     <th scope="col" class="text-uppercase ">Costo biglietto</th>
                   </tr>
                 </thead>
                 <tbody>
-                    <th scope="row"></th>
-                    <td colspan="2"></td>
-                    <td></td>
+                    <th class="bg-secondary">1</th>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
                   </tr>
                 </tbody>
               </table>
         </div>
        </section>
-        <div id="ticket"></div>
+        <div id="ticket">
+            <div class="box"></div>
+        </div>
     </div>
-    
+
 <!-- js src -->
     <script src="js/utility.js"></script>
     <script src="js/script.js"></script>

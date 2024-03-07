@@ -34,34 +34,54 @@ se l'utente ha meno di 18 anni discountJr se ha almeno 65 anni discountSr
 altrimenti prezzo pieno
 */
 
-// message
-let ticketEl1 = document.getElementById('ticket');
-console.log(ticketEl1);
-
-
-//const
 const priceKm = 0.21;
 const discountJr = 20 / 100;
 const discountSr = 40 / 100;
 
-let userKm = parseFloat(document.getElementById('userKm').value);
-let age = ("Inserisci l'età.. ");
-let userName = (document.getElementById('userName').value);
-let userLastName = (document.getElementById('userLastName').value);
+// message
+let ticketEl1 = document.getElementById('ticket');
+console.log(ticketEl1);
 
+let elUserKm = (document.getElementById('Km').value);
+console.log(elUserKm);
+let elName = (document.getElementById('userName').value);
+let elLastName = (document.getElementById('userLastName').value);
+let elAge = (document.getElementById('age'));
+let elButton = document.querySelector('.btn.btn-success');
+
+// console.log(elName, elLastName, elAge, elButton);
+
+let elBox = document.querySelector('.box');
+//console.log(elBox);
+
+elButton.addEventListener('click', function(){
+    // console.log('hai cliccato il bottone');
+    const km = elUserKm.value;   
+    const userName = elName.value;
+    const userLastName = elLastName.value;
+    const age = elAge.value;
+    elBox.innerHTML = userName;
+    elBox.className = 'box '+ colore +' ';
+
+})
+
+let price = priceKm * Km;
+
+if (age < 18) {
+    price -= price * discountJr;
+    console.log(price)
+}else if (age >= 65) {
+    price -= price * discountSr;
+}
 console.log(userKm);
 
 console.log(age);
 
-let price = priceKm * userKm;
 
-if (age < 18) {
-    price -= price * discountJr
-}else if (age >= 65) {
-    price -= price * discountSr
-}
-
+/*
 console.log(price);
+
+document.getElementById('ticket').innerHTML = nameValue;
 /*let message = `Il costo del biglietto è: ${price}`;
 console.log(message);
 
