@@ -18,9 +18,10 @@
 
 <body>
     <div class="wrapper">
-        <h1 class="text-center text-uppercase text-white py-3">
+        <h1 class="text-center text-uppercase text-white py-4">
             Calcola il prezzo del tuo biglietto
         </h1>
+        <!-- first section -->
         <section class="container-sm bg-light my-5 rounded-4">
             <div class="row">
                 <div class="col-3 ">
@@ -49,8 +50,8 @@
                         Seleziona età
                     </label>
                     <select class="form-select form-select-sm">
-                        <option selected>Seleziona</option>
-                        <option value="1">Minorenne</option>
+                        <option selected value="">Seleziona</option>
+                        <option value="">Minorenne</option>
                         <option value="2">Maggiorenne</option>
                         <option value="3">Over 65</option>
                     </select>
@@ -61,11 +62,35 @@
                   </div>
             </div>
         </section>
-       
+        <!-- end first section -->
+        <!-- second section -->
+       <section>
+        <h2 class="text-center text-uppercase text-white fs-1">
+            Il tuo biglietto
+        </h2>
+        <div class="container-sm bg-light my-5 rounded-4">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-uppercase ">Nome passeggero</th>
+                    <th scope="col" class="text-uppercase ">Discount</th>
+                    <th scope="col" class="text-uppercase ">codice cp</th>
+                    <th scope="col" class="text-uppercase ">Costo biglietto</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <th scope="row"></th>
+                    <td colspan="2"></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+       </section>
         <div id="ticket"></div>
-
     </div>
-
+    
+<!-- js src -->
     <script src="js/utility.js"></script>
     <script src="js/script.js"></script>
 </body>
