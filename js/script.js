@@ -43,12 +43,12 @@ const discountSr = 40 / 100;
 console.log(ticketEl1); */
 
 let elUserKm = (document.getElementById('Km'));
-console.log(elUserKm.value);
 let elName = (document.getElementById('userName'));
 let elLastName = (document.getElementById('userLastName'));
 let elAge = (document.getElementById('age'));
 let elButton = document.querySelector('.btn.btn-success');
-let elTicket = (document.getElementById('ticket'))
+let elTicket = (document.getElementById('ticket'));
+
 // console.log(elName, elLastName, elAge, elButton);
 
 elButton.addEventListener('click', function () {
@@ -83,4 +83,18 @@ elButton.addEventListener('click', function () {
 }
 )
 
+//bottone annulla
+const bottoneAnnulla = document.getElementById('anulla');
+
+//nascondiamo il biglietto
+bottoneAnnulla.addEventListener('click', function () {
+    document.getElementById('Km').value = '';
+    document.getElementById('userName').value = '';
+    document.getElementById('userLastName').value = '';
+    document.getElementById('age').value = '';
+    document.querySelector('.btn.btn-success').value = '';
+    document.getElementById('ticket').value = '';
+    elTicket.classList.add('d-none');
+}
+)
 
